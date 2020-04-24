@@ -24,14 +24,14 @@ class RingBuffer:
         # Note:  This is the only [] allowed
         list_buffer_contents = []
 
-        view = self.storage.head
-        list_buffer_contents.append(view.value)
+        latest = self.storage.head
+        list_buffer_contents.append(latest.value)
 
-        while view.next != self.storage.head:
-            if not view.next:
+        while latest.next != self.storage.head:
+            if not latest.next:
                 break
-            list_buffer_contents.append(view.next.value)
-            view = view.next
+            list_buffer_contents.append(latest.next.value)
+            latest = latest.next
         return list_buffer_contents
 
 # ----------------Stretch Goal-------------------
