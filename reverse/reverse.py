@@ -50,14 +50,13 @@ class LinkedList:
               # If last node mark it head
         if node == None:
             return None
-        if node.next_node is None:
+        if node.get_next() is None:
             self.head = node
 
             node.next_node = prev
             return
 
-        next_node = node.next_node
-
+        next_node = node.get_next()
         node.next_node = prev
 
         self.reverse_list(next_node, node)
