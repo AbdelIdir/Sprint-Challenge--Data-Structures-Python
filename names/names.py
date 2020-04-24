@@ -19,7 +19,7 @@ duplicates = []  # Return the list of duplicates in this data structure
 #             duplicates.append(name_1)
 
 thenames = [name for name in names_1 if name in names_2]
-
+#  This will be 0(n)
 
 end_time = time.time()
 print(thenames)
