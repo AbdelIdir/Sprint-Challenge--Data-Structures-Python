@@ -20,6 +20,7 @@ duplicates = []  # Return the list of duplicates in this data structure
 
 thenames = [name for name in names_1 if name in names_2]
 #  This will be 0(n)
+# runtime: 0.9 seconds
 
 end_time = time.time()
 print(thenames)
